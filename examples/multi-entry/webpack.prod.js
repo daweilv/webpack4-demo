@@ -8,11 +8,8 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = merge(common, {
   mode: "production",
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash:8].css"
+      filename: "entry/[name]/index.[contenthash:8].css"
     }),
     new UglifyJSPlugin({
       parallel: true

@@ -11,7 +11,10 @@ module.exports = merge(common, {
     hot: true,
     historyApiFallback: {
       disableDotRule: true,
-      rewrites: [{ from: new RegExp(`/`), to: "/index.html" }]
+      rewrites: [
+        { from: new RegExp(`^/home`), to: "/entry/home/index.html" },
+        { from: new RegExp(`^/detail`), to: "/entry/detail/index.html" }
+      ]
     },
     port: 5000,
     disableHostCheck: true,
@@ -19,9 +22,6 @@ module.exports = merge(common, {
     useLocalIp: true
   },
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("development")
-    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]

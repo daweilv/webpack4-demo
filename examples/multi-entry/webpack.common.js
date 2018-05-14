@@ -10,18 +10,29 @@ const publicPath = "/";
 
 module.exports = {
   entry: {
-    app: "./src/index.js"
+    home: "./src/entry/home/index.js",
+    detail: "./src/entry/detail/index.js"
   },
   output: {
-    filename: devMode ? "index.[hash:8].js" : "index.[chunkhash:8].js",
+    filename: devMode
+      ? "entry/[name]/index.[hash:8].js"
+      : "entry/[name]/index.[chunkhash:8].js",
     path: path.resolve(__dirname, "build"),
     publicPath
   },
   plugins: [
     new CleanWebpackPlugin(["build"]),
     new HtmlWebpackPlugin({
-      title: "Output Management",
-      template: "src/index.html"
+      title: "Home Management",
+      template: "src/entry/home/index.html",
+      filename: "entry/home/index.html",
+      chunks: ["home"]
+    }),
+    new HtmlWebpackPlugin({
+      title: "Detail Management",
+      template: "src/entry/detail/index.html",
+      filename: "entry/detail/index.html",
+      chunks: ["detail"]
     })
   ],
   module: {
@@ -30,6 +41,15 @@ module.exports = {
         test: /\.js$/,
         loader: "babel-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        loader: "url-loader",
+        options: {
+          limit: 8192,
+          name: "asset/image/[name].[hash:8].[ext]",
+          publicPath
+        }
       },
       {
         test: /\.less$/,
@@ -44,15 +64,6 @@ module.exports = {
           },
           "less-loader"
         ]
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        loader: "url-loader",
-        options: {
-          limit: 8192,
-          name: "asset/image/[name].[hash:8].[ext]",
-          publicPath
-        }
       },
       {
         test: /\.(woff|woff2|eot|otf|webp|ttf)$/i,
