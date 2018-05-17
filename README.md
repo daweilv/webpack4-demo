@@ -1,5 +1,9 @@
 # webpack4-demo
 
+examples show how to pack react with webpack.
+
+### devDependencies
+
 ```text
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
@@ -26,7 +30,7 @@
     "webpack-merge": "^4.1.2"
 ```
 
-#### single entry
+### single entry
 
 [example/single-entry](./example/single-entry)
 
