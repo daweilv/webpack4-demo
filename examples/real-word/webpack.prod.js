@@ -15,7 +15,7 @@ module.exports = merge(common, {
       cacheGroups: {
         commons: {
           name: "commons",
-          minSize: 1,
+          minSize: 1, // for demo usage only
           chunks: "initial",
           priority: 2,
           minChunks: 2

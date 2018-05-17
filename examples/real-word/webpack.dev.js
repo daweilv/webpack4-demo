@@ -21,8 +21,5 @@ module.exports = merge(common, {
     host: "0.0.0.0",
     useLocalIp: true
   },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 });
