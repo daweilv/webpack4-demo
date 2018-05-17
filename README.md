@@ -2,6 +2,18 @@
 
 examples show how to pack react with webpack.
 
+### single entry
+
+[example/single-entry](./example/single-entry)
+
+### multiple entry
+
+[example/multi-entry](./example/multi-entry)
+
+### real word
+
+[example/real-word](./example/real-word)
+
 ### devDependencies
 
 ```text
@@ -29,15 +41,3 @@ examples show how to pack react with webpack.
     "webpack-dev-server": "^3.1.4",
     "webpack-merge": "^4.1.2"
 ```
-
-### single entry
-
-[example/single-entry](./example/single-entry)
-
-### multiple entry
-
-[example/multi-entry](./example/multi-entry)
-
-### real word
-
-[example/real-word](./example/real-word)
