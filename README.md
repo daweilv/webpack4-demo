@@ -4,7 +4,7 @@ examples show how to pack react with webpack.
 
 ### single entry
 
-[example/single-entry](./example/single-entry)
+[example/single-entry](example/single-entry)
 
 ### multiple entry
 
