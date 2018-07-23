@@ -4,15 +4,15 @@ examples show how to pack react with webpack.
 
 ### single entry
 
-[example/single-entry](example/single-entry)
+[example/single-entry](https://github.com/daweilv/webpack4-demo/tree/master/examples/single-entry)
 
 ### multiple entry
 
-[example/multi-entry](./example/multi-entry)
+[example/multi-entry](https://github.com/daweilv/webpack4-demo/tree/master/examples/multi-entry)
 
 ### real word
 
-[example/real-word](./example/real-word)
+[example/real-word](https://github.com/daweilv/webpack4-demo/tree/master/examples/real-word)
 
 ### devDependencies
 
